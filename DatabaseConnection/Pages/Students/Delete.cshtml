@@ -1,0 +1,50 @@
+﻿@page
+@model DatabaseConnection.Pages.Students.DeleteModel
+@{
+}
+<h1>:: Delete Student ::</h1>
+
+<h2 class="text-danger">Are you sure want to delete the record?</h2>
+
+<div>
+    <table>
+        <tr>
+            <th>Student ID</th>
+            <td>@Model.StudentRec.StudentID</td>
+        </tr>
+        <tr>
+            <th>Student First Name</th>
+            <td>@Model.StudentRec.StudentName</td>
+        </tr>
+        <tr>
+            <th>Student Last Name</th>
+            <td>@Model.StudentRec.StudentLName</td>
+        </tr>
+        <tr>
+            <th>Student Course</th>
+            <td>@Model.StudentRec.StudentCourse</td>
+        </tr>
+        <tr>
+            <th>Student Status</th>
+            <td>@Model.StudentRec.StudentStatus</td>
+        </tr>
+        <tr>
+            <th>Student Year</th>
+            <td>@Model.StudentRec.StudentYear</td>
+        </tr>
+        <tr>
+            <th>Student Level</th>
+            <td>@Model.StudentRec.StudentLevel</td>
+        </tr>
+    </table>
+
+    <form method="post">
+        <input type="hidden" asp-for="StudentRec.Id"/>
+        <input type="submit" value="Delete" class="btn btn-danger"/>
+    </form>
+</div>
+
+<div>@ViewData["Message"]</div>
+<div>
+    <a href="\Index">Back to Main</a>
+</div>

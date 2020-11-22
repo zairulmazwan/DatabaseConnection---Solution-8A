@@ -1,0 +1,52 @@
+﻿@page
+@model DatabaseConnection.Pages.Students.IndexModel
+@{
+}
+
+<h1>:: Student Creation Page ::</h1>
+
+<div>
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label>Student ID</label>
+                <input asp-for="StudentRecord.StudentID" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Student Name</label>
+                <input asp-for="StudentRecord.StudentName" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Student Last Name</label>
+                <input asp-for="StudentRecord.StudentLName" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Student Course</label>
+                <input asp-for="StudentRecord.StudentCourse" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Student Status</label>
+                <input asp-for="StudentRecord.StudentStatus" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Student Year</label>
+                <input asp-for="StudentRecord.StudentYear" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Student Level</label>
+                <input type="text" asp-for="StudentRecord.StudentLevel" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-dark" />
+            </div>
+
+        </form>
+    </div>
+</div>
